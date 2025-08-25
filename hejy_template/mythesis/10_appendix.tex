@@ -1,0 +1,46 @@
+\begin{appendices} % 开始附录环境
+    % 这个环境会在目录中添加"附录"这一行，并在正文打印"附录"大标题。
+    
+
+\begin{table}[H]
+\centering
+% 列定义：最左、最右有竖线，并且在第一列和第二列之间，第二列和第三列之间也有竖线
+\begin{tabularx}{\linewidth}{| >{\centering}p{0.15\linewidth} | L | L |} % <--- 修改列定义
+\toprule
+% 跨三列的“附录清单”标题，左右也应该有竖线以匹配表格外框
+\multicolumn{3}{|c|}{\textbf{\Large 附录清单}} \\ % 注意这里multicolumn的格式调整为 c| 或 |c| 或 |c
+                                                % 更精确的应该是 |c| 如果左右都有线
+                                                % 但由于它已经是最外层，tabularx的 | 会处理外框
+                                                % 不过，为了清晰，且如果下面有内部竖线，
+                                                % 通常 \multicolumn 也需要指定其内部竖线。
+                                                % 这里因为附录清单下面没有内部竖线，所以 c 就可以。
+                                                % 但为了应对下一行的竖线，我们让它也匹配竖线模式
+\midrule
+% 列标题，列与列之间有竖线
+\textbf{附录编号} & \textbf{名称} & \textbf{解释} \\ % 这里的 & 会自动在它们之间画线 (基于上面的 |L|L|)
+\midrule
+附录A & 可视化函数（部分） & 可视化数据 \\
+\midrule % 在每个数据行后加一条水平线，以模仿你图片中每行都有分隔的效果
+附录B & 问题一：五边形分类代码（主要逻辑） & q1.py 文件中与五边形分类相关的核心类和函数定义 \\
+\midrule
+附录C & 问题二：八面体分类代码（主要逻辑） & q2.py 文件中与八面体分类相关的核心类和函数定义 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+    
+\subsection*{附录A: 可视化函数}
+    
+\noindent visual.py
+\lstinputlisting[language=python,basicstyle=\ttfamily\small]{code/visual.py}
+    
+\subsection*{附录B: 问题一五边形分类核心代码}
+    
+\noindent q1.py
+\lstinputlisting[language=python, basicstyle=\ttfamily\small]{code/q1.py}
+
+\subsection*{附录C: 问题二八面体分类核心代码}
+    
+\noindent q2.py
+\lstinputlisting[language=python,  basicstyle=\ttfamily\small]{code/q2.py}
+    
+\end{appendices} % 结束附录环境

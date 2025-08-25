@@ -1,0 +1,31 @@
+\section{符号说明}
+本文常用符号见下表，其它符号见文中说明。
+
+\begingroup % 开始局部作用域
+\setlength{\heavyrulewidth}{2.5pt} % 设置希望的粗细，仅在此组内有效
+
+\begin{table}[H]
+\centering
+\caption{符号说明表}
+\begin{tabularx}{\textwidth}{CCC}
+\toprule % 这条线会使用上面设置的 1.2pt
+\textbf{符号}    & \textbf{说明}    & \textbf{单位} \\
+\midrule % 中间线的粗细 (由 \lightrulewidth 控制) 保持不变
+\textbf{$P$, $Q$} & \textbf{点集} & \textbf{-} \\
+$p_i$, $q_i$ & 点集中的点 & - \\
+$R$ & 旋转矩阵 & - \\
+$t$ & 平移向量 & - \\
+$RMSD$ & 均方根偏差 & - \\
+$\mathbf{c}$ & 重心 & - \\
+$d_{ij}$ & 点$i$与点$j$之间的距离 & - \\
+$\theta_i$ & 内角 & 弧度 \\
+$\mathcal{F}$ & 特征向量 & - \\
+$\lambda$ & 阈值参数 & - \\
+$\delta$ & 形变参数 & - \\
+$\sigma$ & 噪声强度 & - \\
+\bottomrule % 这条线也会使用上面设置的 1.2pt
+\end{tabularx}
+\label{tab:符号说明}
+\end{table}
+
+\endgroup % 结束局部作用域，\heavyrulewidth 恢复到之前的值

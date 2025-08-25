@@ -1,0 +1,66 @@
+%! Mode:: "TeX:UTF-8"
+%! TEX program = xelatex
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass{cumcmthesis} %  cls 文件
+
+% --- 仅加载 .cls 文件中【未包含】的、本文档【特有】的宏包 ---
+\usepackage[numbers,sort&compress]{natbib}    % 文献管理
+
+
+% --- 论文和个人信息 ---
+
+\title{基于xxxx}
+\studentid{24103219}
+\studentname{贺江阳}
+\college{人工智能学院}
+\major{软件工程}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文
+\begin{document}
+
+% 显示封面
+\maketitle
+
+%摘要
+\include{mythesis/1_abstract}
+
+% 添加目录页
+\cleardoublepage % 或者 \newpage，确保从新的一页开始
+                 % \cleardoublepage 更好，因为它会处理好奇偶页
+
+\pagestyle{empty}    % <--- 从这里开始，所有后续页面的样式都为空（无页眉页脚）
+\tableofcontents     % 生成目录 (可能会跨越多页，所有这些页都将是 empty 样式)
+
+\cleardoublepage     % 结束目录页，并确保下一页是奇数页，同时也让 empty 样式到此为止
+\pagestyle{plain}    % <--- 恢复页面样式为 plain (通常页码在底部居中)
+                     % 如果你的模板有特定的正文页面样式，例如 'headings'，这里用那个
+
+%各部分
+\include{mythesis/2_restate}
+\include{mythesis/3_analysis}
+\include{mythesis/4_assumptions}
+\include{mythesis/5_symbol}
+\include{mythesis/6_q1}
+\include{mythesis/7_q2}
+\include{mythesis/8_repair}
+\include{mythesis/9_assess}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+
+\nocite{*} % 引用所有.bib文件中的条目，即使未在正文中\cite
+\bibliographystyle{gbt7714-numerical}  % 引用格式，符合GB/T 7714-2015数值引用
+\bibliography{ref}  % bib源文件名 (ref.bib)
+% 请确保您有一个名为 ref.bib 的文件，并在其中按上述格式或标准BibTeX格式管理您的参考文献。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection    % 为 hyperref 创建正确的锚点，使得目录中的“附录”可点击
+\addcontentsline{toc}{section}{附录} % 将“附录”作为 section 级别添加到目录
+                                                  % 你可以调整字体大小和粗细
+\include{mythesis/10_appendix}
+\newpage
+
+
+\end{document}
