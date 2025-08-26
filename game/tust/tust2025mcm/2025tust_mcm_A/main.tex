@@ -1,0 +1,96 @@
+%! Mode:: "TeX:UTF-8"
+%! TEX program = xelatex
+\PassOptionsToPackage{quiet}{xeCJK}
+\documentclass[bwprint]{cumcmthesis}
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{tabular}{\zihao{-5}}
+\usepackage[numbers,sort&compress]{natbib}  % 文献管理宏包
+\usepackage[framemethod=TikZ]{mdframed}  % 框架宏包
+\usepackage{url}  % 网页链接宏包
+\usepackage{subcaption}  % 子图宏包
+\usepackage{amsmath} % 提供 \boldsymbol 命令
+\usepackage{bm}      % 可选，增强粗体符号效果
+\usepackage{amsfonts}     % 额外的数学字体
+\usepackage{algorithm}    % 用于 algorithm 浮动环境
+\usepackage{algorithmicx} % 核心算法排版功能
+\usepackage{algpseudocode} % algorithmicx 的一种风格，提供 \State, \Function, \If 等命令
+\usepackage{float}        % 用于 [H] 选项，强制浮动体位置
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+
+% 自定义信息
+\newcommand{\studentid}{24103219} % 学号
+\newcommand{\studentname}{贺江阳} % 姓名
+\newcommand{\college}{人工智能学院} % 所在学院
+\newcommand{\major}{软件工程} % 专业
+
+% 重定义章节标题格式
+\renewcommand{\thesection}{\chinese{section}、}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% 自定义首页格式
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \begin{center}
+      \vspace*{2cm}
+      {\huge\bfseries 基于多尺度特征与优化刚性配准的几何体鲁棒判别模型\par}
+      \vspace{2cm}
+      
+      \begin{tabular}{rl}
+        \Large\textbf{学 \quad 号：} & \Large\underline{\makebox[8cm]{\studentid}} \\[12pt]
+        \Large\textbf{姓 \quad 名：} & \Large\underline{\makebox[8cm]{\studentname}} \\[12pt]
+        \Large\textbf{所在学院：} & \Large\underline{\makebox[8cm]{\college}} \\[12pt]
+        \Large\textbf{专 \quad 业：} & \Large\underline{\makebox[8cm]{\major}} \\[12pt]
+      \end{tabular}
+      
+    \end{center}
+  \end{titlepage}
+}
+
+% 重新定义目录样式
+\renewcommand{\contentsname}{目录}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文
+\begin{document}
+
+% 显示封面
+\maketitle
+
+% 添加目录页
+\cleardoublepage % 或者 \newpage，确保从新的一页开始
+                 % \cleardoublepage 更好，因为它会处理好奇偶页
+
+\pagestyle{empty}    % <--- 从这里开始，所有后续页面的样式都为空（无页眉页脚）
+\tableofcontents     % 生成目录 (可能会跨越多页，所有这些页都将是 empty 样式)
+
+\cleardoublepage     % 结束目录页，并确保下一页是奇数页，同时也让 empty 样式到此为止
+\pagestyle{plain}    % <--- 恢复页面样式为 plain (通常页码在底部居中)
+                     % 如果你的模板有特定的正文页面样式，例如 'headings'，这里用那个
+% 引入各个章节文件
+\include{mythesis/1_abstract}
+\include{mythesis/5_q1}
+\include{mythesis/6_q2}
+\include{mythesis/7_repair}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 参考文献
+
+\nocite{*} % 引用所有.bib文件中的条目，即使未在正文中\cite
+\bibliographystyle{gbt7714-numerical}  % 引用格式，符合GB/T 7714-2015数值引用
+\bibliography{ref}  % bib源文件名 (ref.bib)
+% 请确保您有一个名为 ref.bib 的文件，并在其中按上述格式或标准BibTeX格式管理您的参考文献。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection    % 为 hyperref 创建正确的锚点，使得目录中的“附录”可点击
+\addcontentsline{toc}{section}{附录} % 将“附录”作为 section 级别添加到目录
+                                                  % 你可以调整字体大小和粗细
+\include{mythesis/9_appendix}
+\newpage
+
+
+\end{document}

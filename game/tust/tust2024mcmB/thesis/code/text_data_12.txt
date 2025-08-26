@@ -1,0 +1,61 @@
+# 问题一：评价三款翻译软件的双向翻译效果
+# 原始文本
+[ORIGINAL_TEXT_1]
+天津科技大学位于渤海之滨、海河之畔，是中央和地方共建、天津市重点建设高校，是以工为主，工、理、文、农、医、经、管、法、艺、教育等学科协调发展的多科性大学
+
+# 翻译结果
+[GOOGLE_TRANSLATION_1]
+天津科技大学位于渤海之滨、海河之滨，是一所中央地方合资大学，天津市重点大学，是一所以工学为主，工、理、文、农、医、经、管、法、艺、教育等学科协调发展的多科性大学。
+
+[BAIDU_TRANSLATION_1]
+天津科技大学位于渤海和海河之滨。它是中央和地方政府共同建设的重点大学，也是天津市重点建设大学。它是一所多学科大学，专注于工程和工程、科学、人文、农业、医学、经济、管理、法律、艺术和教育等学科的协调发展
+
+[DEEPL_TRANSLATION_1]
+天津科技大学坐落于渤海之滨、海河之畔，是天津市一所以工为主，工、理、文、农、医、经、管、法、艺、教等学科协调发展的多科性大学。
+
+# 问题二：评价英文短文的双向翻译效果
+# 原始文本
+[ORIGINAL_TEXT_2]
+The Importance of Translation in a Global World
+
+In today's interconnected world, translation plays a vital role in facilitating communication and understanding between different cultures and nations. As businesses expand globally, educational institutions collaborate internationally, and people connect across borders, the ability to accurately translate between languages becomes increasingly crucial.
+
+Professional translators must not only be proficient in multiple languages but also understand the cultural context, idiomatic expressions, and subject-specific terminology. They need to capture not just the literal meaning of words, but also convey the intended message, tone, and cultural nuances of the original text.
+
+While machine translation technology has made significant advances in recent years, it still faces challenges in understanding context, handling ambiguity, and maintaining consistency across longer texts. The emergence of neural machine translation and artificial intelligence has improved accuracy, but human translators remain essential for tasks requiring high precision, cultural sensitivity, or creative expression.
+
+The future of translation likely lies in the collaboration between human translators and machine translation tools. This hybrid approach combines the efficiency and speed of automated systems with the nuanced understanding and judgment that only humans can provide. As technology continues to evolve, this partnership will become increasingly sophisticated, enabling more accurate and natural translations across languages.
+
+# 翻译结果
+[GOOGLE_TRANSLATION_2]
+Importance of Translation in a Globalized World
+
+In today's interconnected world, translation plays a vital role in facilitating communication and understanding across cultures and countries. As businesses expand globally, educational institutions collaborate internationally, and people communicate across borders, the ability to accurately translate between languages ​​becomes increasingly important.
+
+Professional translators must not only be fluent in multiple languages, but also understand cultural context, idioms, and subject-specific terminology. They need to not only capture the literal meaning of words, but also convey the intent, tone, and cultural nuances of the original text.
+
+Although machine translation technology has made significant advances in recent years, it still faces challenges in understanding context, handling ambiguity, and maintaining consistency across long texts. The advent of neural machine translation and artificial intelligence has improved translation accuracy, but human translators remain essential for tasks that require high precision, cultural sensitivity, or creative expression.
+
+The future of translation may lie in the collaboration of human and machine translation tools. This hybrid approach combines the efficiency and speed of automated systems with the nuanced understanding and judgment that only humans can provide. As technology continues to develop, this partnership will mature, resulting in more accurate and natural cross-language translations.
+
+[BAIDU_TRANSLATION_2]
+The Importance of Translation in a Globalized World
+
+In today's interconnected world, translation plays a crucial role in promoting communication and understanding between different cultures and countries. As businesses expand globally, educational institutions collaborate internationally, and people connect across borders, the ability to accurately translate between languages is becoming increasingly important.
+
+Professional translators not only need to be proficient in multiple languages, but also need to understand cultural backgrounds, idiomatic expressions, and terminology specific to a particular topic. They not only need to capture the literal meaning of words, but also need to convey the expected information, tone, and cultural nuances of the original text.
+
+Although machine translation technology has made significant progress in recent years, it still faces challenges in understanding context, handling ambiguity, and maintaining consistency in longer texts. The emergence of neural machine translation and artificial intelligence has improved accuracy, but human translators remain crucial for tasks that require high precision, cultural sensitivity, or creative expression.
+
+The future of translation may lie in the collaboration between human translators and machine translation tools. This hybrid approach combines the efficiency and speed of automated systems with the meticulous understanding and judgment that only humans can provide. With the continuous development of technology, this collaborative relationship will become increasingly complex, making cross language translation more accurate and natural.
+
+[DEEPL_TRANSLATION_2]
+TThe Importance of Translation in a Global World
+
+In today's interconnected world, translation plays a vital role in facilitating communication and understanding between different cultures and countries. As businesses expand globally, educational institutions collaborate internationally, and people connect across borders, the ability to accurately translate different languages becomes increasingly important.
+
+Professional translators must not only be fluent in multiple languages, but also understand the cultural context, idioms, and terminology of a particular subject. They must not only capture the literal meaning, but also convey the message, tone and cultural nuances of the original text.
+
+While machine translation technology has come a long way in recent years, it still faces challenges in understanding context, dealing with ambiguity, and maintaining consistency across long texts. The advent of neural machine translation and artificial intelligence has improved accuracy, but human translators are still essential for tasks that require a high degree of precision, cultural sensitivity or creative expression.
+
+The future of translation may lie in the collaboration between human translators and machine translation tools. This hybrid approach combines the efficiency and speed of automated systems with the nuanced understanding and judgment that only humans can provide. As technology continues to evolve, this partnership will become more sophisticated, leading to more accurate and natural cross-lingual translations. 
