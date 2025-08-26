@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 import random
+
+matplotlib.rcParams["font.sans-serif"] = ["SimHei"]  # 用来正常显示中文标签
+matplotlib.rcParams["axes.unicode_minus"] = False  # 用来正常显示负号
 
 # --- Step 1: Define SPRT Parameters ---
 p0 = 0.10  # 合格质量水平 (H0)
@@ -108,8 +112,8 @@ def generate_decision_chart():
     d_reject = slope * m + intercept_reject
 
     plt.figure(figsize=(12, 8))
-    plt.plot(m, d_accept, "g-", label="接受线 (Acceptance Line)")
-    plt.plot(m, d_reject, "r-", label="拒绝线 (Rejection Line)")
+    plt.plot(m, d_accept, "g-", label="接受线")
+    plt.plot(m, d_reject, "r-", label="拒绝线")
 
     # 填充区域
     plt.fill_between(m, d_accept, -1, color="green", alpha=0.2, label="接受区域")
@@ -121,8 +125,8 @@ def generate_decision_chart():
     )
 
     plt.title("SPRT 抽样决策图", fontsize=16)
-    plt.xlabel("抽样数量 (Number of Samples, m)", fontsize=12)
-    plt.ylabel("发现的次品数 (Number of Defects, d)", fontsize=12)
+    plt.xlabel("抽样数量", fontsize=12)
+    plt.ylabel("发现的次品数", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.6)
     plt.legend()
     plt.xlim(0, 150)  # 可以调整X轴范围以便观察
