@@ -124,7 +124,6 @@ def generate_decision_chart():
         m, d_accept, d_reject, color="yellow", alpha=0.3, label="继续抽样区域"
     )
 
-    plt.title("SPRT 抽样决策图", fontsize=16)
     plt.xlabel("抽样数量", fontsize=12)
     plt.ylabel("发现的次品数", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.6)
